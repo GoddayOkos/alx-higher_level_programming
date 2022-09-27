@@ -24,7 +24,7 @@ int is_palindrome(listint_t **head)
 	tmp = *head;
 	while (tmp)
 	{
-		array[i++] = tem->n;
+		array[i++] = tmp->n;
 		tmp = tmp->next;
 	}
 	for (i = 0; i < nodes / 2; i++)
