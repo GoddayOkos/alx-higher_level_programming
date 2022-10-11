@@ -37,6 +37,7 @@ class Square:
         """
         return self.__size ** 2
 
+    @property
     def size(self):
         """Call the function to checking property
 
@@ -45,6 +46,7 @@ class Square:
         """
         return self.__size
 
+    @size.setter
     def size(self, value):
         """validate value and update size attribute
 
