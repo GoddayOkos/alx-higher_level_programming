@@ -18,18 +18,9 @@ class Square:
         Args:
             size: A private attribute
             position: A public attribute rep. x and y coord.
-
-        Raises:
-            TypeError: Exception if size is not an integer
-            ValueError: Exception if size is less than 0
         """
         self.position = position
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.size = size
 
     def area(self):
         """Calculates the area of the square
@@ -72,8 +63,12 @@ class Square:
         if self.__size == 0:
             print()
         else:
+            for i in range(self.position[1]):
+                print()
             for i in range(self.size):
-                for j in range(self.size):
+                for j in range(self.position[0]):
+                    print(end=" ")
+                for k in range(self.size):
                     print("#", end="")
                 print()
 
