@@ -17,10 +17,13 @@ def pascal_triangle(n):
     Return:
         A matrix with values for the triangle
     """
+    if n <= 0:
+        return []
+
     pascal = []
     triangle = []
 
-    for i in range(int(n)):
+    for i in range(n):
         new = pascal[:]
         new.append(1)
         pos = len(pascal)
