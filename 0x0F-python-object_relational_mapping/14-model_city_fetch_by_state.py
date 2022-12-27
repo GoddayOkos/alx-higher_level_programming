@@ -29,4 +29,4 @@ if __name__ == '__main__':
                     .join(City, City.state_id == State.id)\
                     .order_by(City.id)
     for city in cities:
-        print("{}: ({}) {}".format(result[0], result[1], result[2]))
+        print("{}: ({}) {}".format(city[0], city[1], city[2]))
