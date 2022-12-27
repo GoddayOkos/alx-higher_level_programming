@@ -19,7 +19,7 @@ if __name__ == '__main__':
     password = args[2]
     db_name = args[3]
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
-                           .format(usermane, password, db_name))
+                           .format(username, password, db_name))
     # create custom session object class from database engine
     Session = sessionmaker(bind=engine)
     # create instance of new custom session class
