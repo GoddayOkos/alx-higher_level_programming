@@ -26,7 +26,7 @@ if __name__ == '__main__':
     session = Session()
     states = session.query(State).filter(State.name.contains('a'))\
                     .order_by(State.id)
-    if statse is not None:
+    if states is not None:
         for state in states:
             print('{}: {}'.format(state.id, state.name))
     else:
