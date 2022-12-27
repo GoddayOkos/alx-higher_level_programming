@@ -7,6 +7,8 @@ Created on Tue Dec 27 2022
 import sqlalchemy
 from sqlalchemy import Column, Integer, String, ForeignKey
 from relationship_state import Base, State
+
+
 class City(Base):
     """
     A new table into de data base for city representation
