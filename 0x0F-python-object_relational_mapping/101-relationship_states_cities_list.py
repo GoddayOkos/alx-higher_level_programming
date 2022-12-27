@@ -25,8 +25,9 @@ if __name__ == '__main__':
     Session = sessionmaker(bind=engine)
     # create instance of new custom session class
     session = Session()
-    california = State(name="California")
-    california.cities = [City(name="San Francisco")]
-    session.add(california)
-    session.commit()
+    rows = session.query(State).all()
+    for state in rows:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("    {}: {}".format(city.id, city.name))
     session.close()
